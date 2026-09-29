@@ -1,0 +1,144 @@
+SAMPLE RUN (typed input shown after each prompt)
+Compile : cd src && javac com/college/model/*.java com/college/service/*.java com/college/app/Main.java
+Run     : java com.college.app.Main
+------------------------------------------------------------------
+
+========== EMPLOYEE PAYROLL MANAGEMENT SYSTEM ==========
+1. Add Full-Time Employee
+2. Add Part-Time Employee
+3. Display All Employees
+4. Search Employee by ID
+5. Search Employee by Name
+6. Calculate Payroll
+7. Generate Payslip
+8. Display Total Employees
+9. Exit
+========================================================
+Enter your choice: 1
+--- Add Full-Time Employee ---
+Employee ID: e101
+Name: Rahul Sharma
+Age (minimum 18): 28
+Phone (Enter to skip): 9876543210
+Departments:
+  1. Human Resources
+  2. Information Technology
+  3. Finance & Accounts
+  4. Sales & Marketing
+  5. Operations
+Choose department (1-5): 2
+Designation: Software Engineer
+Basic salary: 50000
+Other allowance: 5000
+Deduction: 4000
+Full-time employee added successfully.
+
+[menu]
+Enter your choice: 2
+--- Add Part-Time Employee ---
+Employee ID: P201
+Name:   Meena Iyer 
+Age (minimum 18): 22
+Phone (Enter to skip): 
+Departments:
+  1. Human Resources
+  2. Information Technology
+  3. Finance & Accounts
+  4. Sales & Marketing
+  5. Operations
+Choose department (1-5): 1
+Designation: Teaching Assistant
+Hours worked: 80
+Hourly rate: 250
+Deduction: 1000
+Part-time employee added successfully.
+
+[menu]
+Enter your choice: 3
+ID       Name                 Department               Designation          Type      
+-------------------------------------------------------------------------------------
+E101     Rahul Sharma         Information Technology   Software Engineer    Full-Time 
+P201     Meena Iyer           Human Resources          Teaching Assistant   Part-Time 
+
+[menu]
+Enter your choice: 4
+Enter Employee ID to search:   e101  
+Employee found:
+ID: E101   | Rahul Sharma (Age 28, Phone 9876543210) | Information Technology | Software Engineer | Full-Time | Basic: 50000.00
+
+[menu]
+Enter your choice: 5
+Enter name (or part of a name):   meena 
+1 employee(s) found:
+ID: P201   | Meena Iyer (Age 22, Phone N/A) | Human Resources | Teaching Assistant | Part-Time | 80.0 hrs @ 250.00
+
+[menu]
+Enter your choice: 6
+ID       Name                 Type              Gross    Deduction          Net
+---------------------------------------------------------------------------
+E101     Rahul Sharma         Full-Time      70000.00      4000.00     66000.00
+P201     Meena Iyer           Part-Time      20000.00      1000.00     19000.00
+---------------------------------------------------------------------------
+Total Gross Payroll : Rs. 90000.00
+Total Net Payroll   : Rs. 85000.00
+Average Net Pay     : Rs. 42500.00
+
+[menu]
+Enter your choice: 7
+Enter Employee ID for payslip: e101
+================================================
+                EMPLOYEE PAYSLIP
+================================================
+Employee ID     : E101
+Name            : Rahul Sharma
+Department      : Information Technology (CC-102)
+Designation     : Software Engineer
+Employee Type   : Full-Time
+------------------------------------------------
+EARNINGS
+  Basic Salary            : Rs.     50000.00
+  HRA (20% of Basic)      : Rs.     10000.00
+  DA (10% of Basic)       : Rs.      5000.00
+  Other Allowance         : Rs.      5000.00
+------------------------------------------------
+Gross Pay                 : Rs.     70000.00
+Deductions                : Rs.      4000.00
+NET PAY                   : Rs.     66000.00
+Net Pay (rounded)         : Rs. 66000
+Pay Grade                 : B
+================================================
+
+[menu]
+Enter your choice: 7
+Enter Employee ID for payslip: P201
+================================================
+                EMPLOYEE PAYSLIP
+================================================
+Employee ID     : P201
+Name            : Meena Iyer
+Department      : Human Resources (CC-101)
+Designation     : Teaching Assistant
+Employee Type   : Part-Time
+------------------------------------------------
+EARNINGS
+  Hours Worked            :           80.00 hrs
+  Hourly Rate             : Rs.       250.00
+  Earned (Hours x Rate)   : Rs.     20000.00
+------------------------------------------------
+Gross Pay                 : Rs.     20000.00
+Deductions                : Rs.      1000.00
+NET PAY                   : Rs.     19000.00
+Net Pay (rounded)         : Rs. 19000
+Pay Grade                 : C
+================================================
+
+[menu]
+Enter your choice: 8
+Total employees in system : 2
+  Full-time employees     : 1
+  Part-time employees     : 1
+Employee objects created (static count): 2
+
+[menu]
+Enter your choice: 9
+Thank you for using the Employee Payroll Management System.
